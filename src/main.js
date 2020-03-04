@@ -15,6 +15,7 @@ Vue.use(toast)
 //解决移动端300毫秒延迟
 FastClick.attach(document.body)
 Vue.use(VueFastLoad,{
+	preLoad: 1,
 	loading:require('./assets/img/common/timg.jpg')
 })
 new Vue({

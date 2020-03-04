@@ -18,6 +18,12 @@
 			pullUpLoad:{
 				type:Boolean,
 				default:false
+			},
+			data: {
+			  type: Array,
+			  default: () => {
+			    return []
+			  }
 			}
 		},
 		data(){
@@ -64,6 +70,11 @@
 			getScrollY(){
 				return this.scroll ? this.scroll.y : 0
 			}
+		},
+		watch: {
+		  data() {
+		    setTimeout(this.refresh, 20)
+		  }
 		}
 	}
 </script>

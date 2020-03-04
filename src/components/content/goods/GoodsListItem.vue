@@ -27,6 +27,7 @@
 		},
 		computed:{
 			showImg(){
+				//return this.goods.img || this.goods.image || this.goods.show.img
 				return this.goodsItem.image || this.goodsItem.show.img
 			}
 		},
